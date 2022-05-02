@@ -2,7 +2,10 @@ import 'package:flutter_todo_auth/auth/login/fom_submission_status.dart';
 
 class LoginState {
   final String email;
+  bool get isValidEmail => email.length > 5;
   final String password;
+  bool get isValidPassword => password.length > 3;
+
   final FormSubmissionStatus formStatus;
 
   LoginState(
